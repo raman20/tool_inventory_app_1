@@ -1,0 +1,34 @@
+tool name
+
+database					input file 							interface				output file
+tables - inventory data		excel file (tools) update in db		see and select tools	excel file with logo
+sqlite3						to be update in db					REACT js/FLASK py		
+
+
+Initially achieve functionality
+then Object Oriented Programming
+
+Design patterns
+
+
+Python
+Flask
+SQlite
+JavaScript
+pandas
+ - dataframe
+ - read_excel
+ - to_excel
+
+Design document
+ -  Requirement
+ - 	Project Architecture
+ -  project flow
+ -  details of technology used
+
+
+
+read and write excel
+set a logo in excel (jpeg)
+Database creation
+create tables using Dataframe

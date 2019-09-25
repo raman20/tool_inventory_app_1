@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import mysql.connector
+import os
 from openpyxl import Workbook
 
 
@@ -45,15 +46,19 @@ def tool_transfer():
     sql = f"select * from tools where location='{destination}'"
     cursor.execute(sql)  
     result = cursor.fetchall()
-    sheet_name=input('enter sheet name:-> ')
+    sheetname = input('enter sheet name:-> ')
+    path = 'save_data/'+ sheetname +'.xlsx'
+    # saving data to excel file
     wb = Workbook()
     ws = wb.create_sheet(0)
-    ws.title = sheet_name
+    ws.title(sheetname)
     ws.append(cursor.column_names)
     for i in result:
         ws.append(i)
-    wb.save('save_data/save.xlsx')    
-    print(f'data exported to excel_file at "save_data/save.xlsx" on sheet_name {sheet_name}')
+    os.mknod(path) # create new excel file
+    wb.save(path)    
+    wb.close()
+    print(f'data exported to excel_file at "{path}"')
     cursor.close()
     db.close()
     

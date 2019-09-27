@@ -2,7 +2,7 @@ tool name
 
 database					input file 							interface				output file
 tables - inventory data		excel file (tools) update in db		see and select tools	excel file with logo
-sqlite3						to be update in db					REACT js/FLASK py		
+mysql/postgresql						to be update in db					REACT js/FLASK py		
 
 
 Initially achieve functionality
@@ -13,7 +13,7 @@ Design patterns
 
 Python
 Flask
-SQlite
+mysql/postgresql
 JavaScript
 pandas
  - dataframe

@@ -51,7 +51,7 @@ def tool_transfer():
     # saving data to excel file
     wb = Workbook()
     ws = wb.create_sheet(0)
-    ws.title(sheetname)
+    ws.title = sheetname
     ws.append(cursor.column_names)
     for i in result:
         ws.append(i)
